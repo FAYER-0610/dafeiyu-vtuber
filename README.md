@@ -9,9 +9,9 @@
 
 ## 演示
 
-[![实机演示（点开看带声音的版本）](docs/media/demo.gif)](https://wangding0610.github.io/dafeiyu-vtuber/)
+[![实机演示（点开看带声音的版本）](docs/media/demo.gif)](https://fayer-0610.github.io/dafeiyu-vtuber/)
 
-实机录屏剪成 22 秒，依次是：回合开头说打算，整回合连着出牌；叫昵称回弹幕；斩杀前先喊再出手；打完战斗领奖励。GIF 没有声音，**[点这里看带声音的版本](https://wangding0610.github.io/dafeiyu-vtuber/)**（或直接下载 [demo.mp4](docs/media/demo.mp4)）。
+实机录屏剪成 22 秒，依次是：回合开头说打算，整回合连着出牌；叫昵称回弹幕；斩杀前先喊再出手；打完战斗领奖励。GIF 没有声音，**[点这里看带声音的版本](https://fayer-0610.github.io/dafeiyu-vtuber/)**（或直接下载 [demo.mp4](docs/media/demo.mp4)）。
 
 ## 表情
 
@@ -68,7 +68,7 @@
 
 整回合规划、先说后打、观众引导和药水栏满时不卡住，都是对 STS2-Agent 的补丁，按上游的 AGPL-3.0 公开在：
 
-**https://github.com/wangding0610/STS2-Agent/tree/dafeiyu-live**
+**https://github.com/FAYER-0610/STS2-Agent/tree/dafeiyu-live**
 
 需要自己编译 DLL 并替换创意工坊里的 `STS2AIAgent.dll`（替换前关掉游戏；创意工坊更新会覆盖补丁）。不装补丁也能用，只是没有先说后打、整回合规划和观众引导。
 
