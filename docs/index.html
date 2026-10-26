@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大肥鱼 · AI 尖塔主播</title>
+<meta name="description" content="在 B站直播《杀戮尖塔2》的中文 AI 虚拟主播：自己打牌、自己解说、自己回弹幕。">
+<style>
+  :root {
+    --bg: #0b1530; --panel: #13224a; --line: #24396f;
+    --text: #e8eefc; --muted: #9fb0d8; --accent: #6fb6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.7 system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: .02em; }
+  h2 { font-size: 1.25rem; margin: 48px 0 12px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--muted); margin-bottom: 24px; }
+  a { color: var(--accent); }
+  video, .img {
+    display: block; width: 100%; height: auto; border-radius: 12px;
+    border: 1px solid var(--line); background: #000;
+  }
+  .caption { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+  ol.beats { padding-left: 1.4em; margin: 12px 0 0; }
+  ol.beats li { margin: 4px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 1rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .faces { display: grid; grid-template-columns: 300px 1fr; gap: 16px; align-items: start; }
+  .faces .img { background: var(--panel); }
+  @media (max-width: 720px) { .faces { grid-template-columns: 1fr; } .faces .anim { max-width: 300px; margin: 0 auto; } }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .links a {
+    text-decoration: none; padding: 8px 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--panel);
+  }
+  footer { margin-top: 56px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>大肥鱼 · AI 尖塔主播</h1>
+  <p class="lead">一个在 B站直播《杀戮尖塔2》的中文 AI 虚拟主播：自己打牌、自己解说、自己回弹幕。</p>
+
+  <video controls playsinline preload="metadata" poster="media/poster.jpg">
+    <source src="media/demo.mp4" type="video/mp4">
+  </video>
+  <p class="caption">实机录屏，剪成 22 秒，有声音。</p>
+  <ol class="beats">
+    <li>回合开头先说这回合的打算，然后整回合几张牌一口气打完。</li>
+    <li>回弹幕时叫出观众昵称（这里是控制页发的测试弹幕）。</li>
+    <li>斩杀前先喊一句，说完才出手，声音和画面对得上。</li>
+    <li>打完战斗，奖励一起说，不重复念。</li>
+  </ol>
+
+  <h2>她会做什么</h2>
+  <div class="grid">
+    <div class="card"><h3>先说后打</h3><p>Mod 每次出手前先问主播程序。值得说的一步，她说完才出牌；不值得说的立刻放行。</p></div>
+    <div class="card"><h3>整回合规划</h3><p>一次想好整回合的出牌顺序；抽到新牌、目标死亡时把原计划交回去修改，不从零想。</p></div>
+    <div class="card"><h3>观众引导打法</h3><p>弹幕里的打法主意挂到建议板，打牌的 AI 自己权衡听不听，她会点名说采纳了谁。</p></div>
+    <div class="card"><h3>像人一样聊天</h3><p>叫昵称、有心情、认得回头客；下播后写日记、整理熟人印象和直播间的梗。</p></div>
+  </div>
+
+  <h2>14 种表情</h2>
+  <div class="faces">
+    <img class="img anim" src="media/expressions.gif" alt="14 种表情轮播动画" loading="lazy">
+    <img class="img" src="media/expressions.jpg" alt="14 种表情一览" loading="lazy">
+  </div>
+  <p class="caption">自研 WebGL 网格形象：口型跟着实际音频走，会自己眨眼，头发和饰品有物理摆动；台词的情绪决定表情。</p>
+
+  <div class="links">
+    <a href="https://github.com/wangding0610/dafeiyu-vtuber">主播程序源码</a>
+    <a href="https://github.com/wangding0610/STS2-Agent/tree/dafeiyu-live">STS2-Agent 补丁</a>
+  </div>
+
+  <footer>
+    形象素材 CC BY-NC-SA 4.0，仅限非商业使用。原型「溟月」：B站 @上善无形；女仆鲸鱼娘（大肥鱼）设计：B站 @ZipZipPipe。
+    这是社区二创形象，不是 DeepSeek 官方形象。本项目与 Mega Crit、DeepSeek、ElevenLabs、哔哩哔哩没有关联。
+  </footer>
+</main>
+</body>
+</html>

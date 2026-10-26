@@ -7,6 +7,22 @@
 
 两边各用各的 key、各跑各的进程，靠本机 HTTP 接口配合。
 
+## 演示
+
+[![实机演示（点开看带声音的版本）](docs/media/demo.gif)](https://wangding0610.github.io/dafeiyu-vtuber/)
+
+实机录屏剪成 22 秒，依次是：回合开头说打算，整回合连着出牌；叫昵称回弹幕；斩杀前先喊再出手；打完战斗领奖励。GIF 没有声音，**[点这里看带声音的版本](https://wangding0610.github.io/dafeiyu-vtuber/)**（或直接下载 [demo.mp4](docs/media/demo.mp4)）。
+
+## 表情
+
+<p>
+<img src="docs/media/expressions.gif" alt="14 种表情轮播" width="220" align="left">
+<img src="docs/media/expressions.jpg" alt="14 种表情一览" width="560">
+</p>
+<br clear="left">
+
+自研 WebGL 网格形象，14 种表情：日常、开心、兴奋、惊讶、难过、生气、害羞、得意、疑惑、哭哭、鼓脸、星星眼、晕乎乎、吐舌眨眼。口型跟着实际音频走，会自己眨眼，头发和饰品有物理摆动；台词的情绪决定表情。
+
 ## 特点
 
 - **先说后打**：Mod 每次出手前先问主播程序。值得说的一步，她先说完 Mod 才出牌，声音和画面对得上；不值得说的立刻放行。主播程序没开时不影响游戏。
