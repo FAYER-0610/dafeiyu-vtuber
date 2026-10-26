@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大肥鱼 · 深海弹幕</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="danmaku.css">
+</head>
+<body>
+  <section class="chat card frill" id="chat" aria-label="直播弹幕">
+    <header class="title-row">
+      <span class="gem"></span>
+      <h2>深海来信</h2>
+      <span class="tag">弹幕</span>
+      <span class="conn"><i class="lamp" id="connLamp"></i><span id="connection">连接中</span></span>
+    </header>
+    <div class="list" id="messages" role="log" aria-live="polite"></div>
+    <p class="empty" id="empty">还没有弹幕～<br>来和大肥鱼说句话吧</p>
+    <footer class="hint">发弹幕和大肥鱼聊天 · 她会挑几条回应你</footer>
+  </section>
+  <script type="module" src="danmaku.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* 大肥鱼直播间 · 共享视觉
+   主题：深海 × 女仆。配色取自形象：宝蓝发色、白色荷叶边、黑丝带、金边蓝宝石。 */
+:root {
+  --navy-950: #050b1f;
+  --navy-900: #0a1533;
+  --navy-800: #11224d;
+  --navy-700: #1a3170;
+  --sapphire: #3d6bea;
+  --sapphire-hi: #6d97ff;
+  --sky: #a8d0ff;
+  --frost: #edf4ff;
+  --gold: #f1cf7c;
+  --gold-deep: #b98c34;
+  --blush: #ff9dba;
+  --ink: #f5f8ff;
+  --muted: #9fb3dd;
+  --ok: #7fe3b6;
+  --warn: #ffd37e;
+  --bad: #ff8fa3;
+
+  --card-bg: linear-gradient(180deg, rgba(20, 38, 88, .90) 0%, rgba(9, 18, 46, .93) 100%);
+  --card-edge: rgba(168, 208, 255, .26);
+  --card-shadow: 0 18px 42px rgba(2, 6, 22, .45), 0 2px 0 rgba(255, 255, 255, .04) inset;
+  --radius: 22px;
+
+  /* 兼容旧类名（测试播放器仍在用） */
+  --ocean: var(--navy-900);
+  --surface: rgba(10, 21, 51, .88);
+  --card: rgba(20, 38, 88, .88);
+  --edge: var(--card-edge);
+  --accent: var(--sapphire-hi);
+
+  font-family: "HarmonyOS Sans SC", "MiSans", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  color: var(--ink);
+}
+
+/* ?preview：单页调试时给一个深海底色 */
+body.preview { background: radial-gradient(ellipse at 60% 35%, #18306a, #050b1f 70%); }
+
+/* ---------- 卡片：深蓝底 + 顶部白色荷叶边 ---------- */
+.card {
+  position: absolute;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.frill::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: -9px;
+  height: 10px;
+  background: radial-gradient(circle at 50% 100%, var(--frost) 0 7.5px, transparent 8px) 0 0 / 17px 10px repeat-x;
+  filter: drop-shadow(0 -1px 0 rgba(10, 21, 51, .5));
+  opacity: .92;
+}
+
+/* 金边蓝宝石：小标题、分隔符 */
+.gem {
+  display: inline-block;
+  flex: none;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: 1.5px solid var(--gold);
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--sky), var(--sapphire) 60%, var(--navy-700));
+  box-shadow: 0 0 8px rgba(109, 151, 255, .7);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-row h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.title-row .tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  color: var(--navy-900);
+  background: var(--sky);
+}
+
+/* 状态灯 */
+.lamp {
+  display: inline-block;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6f7da0;
+}
+
+.lamp.ok { background: var(--ok); box-shadow: 0 0 8px var(--ok); }
+.lamp.warn { background: var(--warn); box-shadow: 0 0 8px var(--warn); }
+.lamp.bad { background: var(--bad); box-shadow: 0 0 8px var(--bad); }
+.lamp.pulse { animation: pulse 1.6s ease-in-out infinite; }
+
+@keyframes pulse {
+  50% { opacity: .35; }
+}
+
+/* ---------- 旧类名，供测试播放器使用 ---------- */
+.glass {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.eyebrow { font-size: 12px; letter-spacing: 3px; color: var(--muted); font-weight: 600; }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 9px; }
+.pill { padding: 7px 13px; border: 1px solid var(--edge); border-radius: 99px; font-size: 14px; white-space: nowrap; }
+
+button {
+  font: inherit;
+  color: var(--ink);
+  background: var(--navy-700);
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

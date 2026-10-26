@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大肥鱼 · 直播控制</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="control.css">
+</head>
+<body class="preview">
+  <main class="panel card frill">
+    <header class="title-row"><span class="gem"></span><h2>直播控制</h2><span class="lamp" id="lamp"></span><b id="state">连接中</b></header>
+    <p class="since" id="since"></p>
+    <div class="buttons">
+      <button id="start" type="button">开播</button>
+      <button id="end" type="button">下播</button>
+    </div>
+    <p class="hint">B 站开播/下播时程序会自动知道，按钮是给测试或者没收到信号时用的。下播后她会先道别，再整理记忆、写日记、发动态。</p>
+    <dl>
+      <dt>上一篇日记</dt><dd id="diary">—</dd>
+      <dt>动态</dt><dd id="dynamic">—</dd>
+    </dl>
+    <section id="test" hidden>
+      <h3>模拟弹幕（测试模式）</h3>
+      <div class="row"><input id="name" maxlength="24" placeholder="昵称" value="测试观众"><input id="text" maxlength="200" placeholder="说点什么，回车发送"></div>
+      <div class="row"><button id="say" type="button">发弹幕</button><button id="enter" type="button">进场</button><button id="gift" type="button">送礼</button></div>
+      <p class="hint">同一个昵称算同一个人。她不会每条都回；点名“大肥鱼”或者提问更容易被接。熟人要等下播整理后才会进 熟人.md。</p>
+      <ol id="log"></ol>
+    </section>
+    <p class="hint">记忆都在 <code>vtuber-host\memory\</code>，用记事本打开就能看、能改。</p>
+  </main>
+  <script type="module" src="control.js"></script>
+</body>
+</html>

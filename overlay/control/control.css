@@ -1,0 +1,21 @@
+.panel { position: relative; margin: 48px auto; width: 520px; padding: 26px 30px; }
+.title-row b { font-size: 15px; color: var(--muted); }
+.since { margin: 8px 0 0; color: var(--muted); min-height: 1.2em; }
+.buttons { display: flex; gap: 14px; margin: 20px 0 12px; }
+.buttons button { flex: 1; font-size: 18px; font-weight: 700; }
+#start { background: var(--sapphire); }
+#end { background: var(--navy-700); }
+button:disabled { opacity: .45; cursor: default; }
+.hint { font-size: 13px; color: var(--muted); line-height: 1.6; }
+dl { display: grid; grid-template-columns: 96px 1fr; gap: 6px 10px; margin: 16px 0; font-size: 14px; }
+dt { color: var(--muted); }
+dd { margin: 0; word-break: break-all; }
+code { color: var(--sky); }
+#test { border-top: 1px solid var(--card-edge); margin-top: 8px; padding-top: 6px; }
+#test h3 { font-size: 16px; margin: 10px 0; }
+.row { display: flex; gap: 10px; margin-bottom: 10px; }
+.row input { font: inherit; color: var(--ink); background: var(--navy-950); border: 1px solid var(--card-edge); border-radius: 10px; padding: 9px 12px; }
+#name { width: 120px; }
+#text { flex: 1; }
+.row button { flex: 1; padding: 9px 12px; }
+#log { margin: 0; padding-left: 20px; font-size: 13px; color: var(--muted); max-height: 160px; overflow: auto; }

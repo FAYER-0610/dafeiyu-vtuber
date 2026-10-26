@@ -1,0 +1,20 @@
+Vendored component: blivedm 1.1.7
+Upstream: https://github.com/xfgryujk/blivedm
+Commit: 3bf17fe862b8c2fc6bc04c81c3f0c5db95de93d6
+License: MIT (full text in BLIVEDM-LICENSE)
+Retrieved and checked: 2026-10-25
+Files: blivedm/ (upstream unchanged)
+
+Protocol adaptation reference: https://github.com/Olmvormvhh/blivedm-260909
+At inspection, both upstream master/dev and fork dev pointed to the same commit above.
+The upstream implementation includes base64 + protobuf INTERACT_WORD_V2 and SEND_GIFT_V2;
+DANMU_MSG remains the info-array format. Synthetic protobuf parsing tests cover both V2 commands.
+Live authenticated room reception remains unverified until the user completes QR login.
+
+Do NOT install the PyPI package named blivedm: upstream explicitly warns it is unrelated.
+The host imports this local vendor copy. No upstream installation/build script is executed.
+Upstream declares aiohttp~=3.9 and yarl~=1.9; this host intentionally uses maintained current
+3.x/1.x versions and separately tests constructor, protobuf parsing, local HTTP and WebSocket
+behavior. Authenticated Bilibili integration still requires a real-room test.
+Open-live code is retained as upstream source but never instantiated by the host;
+only BLiveClient (cookie-based receive-only web protocol) is used.

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 50">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d97ff"/>
+      <stop offset="1" stop-color="#2f56c9"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#a8d0ff" stroke-width="2.4" stroke-linecap="round">
+    <path d="M25 11 C24 6 20 3.5 15.5 4.5"/>
+    <path d="M25 11 C26 6 30 3.5 34.5 4.5"/>
+    <path d="M25 11 V6"/>
+  </g>
+  <path d="M48 27 C53 24 55 18 60 14 C61.5 20 60.5 24 56.5 27 C60.5 28 63 32 62 36.5 C57.5 33 53 31.5 48.5 32.5 Z" fill="#2f56c9" stroke="#0a1533" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M5 30 C5 17 18 11 32 12.5 C45 14 52 21 52 30 C52 41 42 47 28 47 C14 47 5 41 5 30 Z" fill="url(#b)" stroke="#0a1533" stroke-width="1.8"/>
+  <path d="M9 34 C15 43 37 45 47 36 C41 44 16 45 9 34 Z" fill="#edf4ff"/>
+  <path d="M9.5 34.5 C18 41 36 42 46.5 36" fill="none" stroke="#edf4ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="20" cy="26" r="3" fill="#0a1533"/>
+  <circle cx="21" cy="25" r="1" fill="#fff"/>
+  <ellipse cx="15.5" cy="31.5" rx="3.2" ry="1.8" fill="#ff9dba" opacity=".8"/>
+</svg>

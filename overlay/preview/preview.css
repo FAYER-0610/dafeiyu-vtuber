@@ -1,0 +1,11 @@
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; font-family: "Microsoft YaHei", sans-serif; }
+#game {
+  position: absolute;
+  left: 456px; top: 24px; width: 1440px; height: 810px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  color: rgba(255, 255, 255, .55);
+  background: repeating-linear-gradient(45deg, #2a2230 0 24px, #251e2b 24px 48px);
+}
+#game b { font-size: 40px; }
+#game span { font-size: 20px; }
+iframe { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; border: 0; background: transparent; }

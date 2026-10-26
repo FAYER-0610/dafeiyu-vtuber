@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大肥鱼 · 直播状态</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="status.css">
+</head>
+<body>
+  <section class="status card frill" id="card" aria-label="直播状态">
+    <header class="brand">
+      <img class="logo" src="/shared/whale.svg" alt="">
+      <div class="names">
+        <h1 id="title">大肥鱼的深海尖塔电台</h1>
+        <div class="sub-row"><p id="tagline">AI 主播 · 杀戮尖塔2 实况</p><span class="live" id="live"><i></i><b id="liveText">连接中</b></span></div>
+      </div>
+    </header>
+    <div class="chips">
+      <span class="chip" id="chip-game"><i class="lamp"></i><span>游戏</span><b>—</b></span>
+      <span class="chip" id="chip-team"><i class="lamp"></i><span>出牌</span><b>—</b></span>
+      <span class="chip" id="chip-bili"><i class="lamp"></i><span>弹幕</span><b>—</b></span>
+      <span class="chip" id="chip-voice"><i class="lamp"></i><span>语音</span><b>—</b></span>
+    </div>
+    <div class="run">
+      <div class="run-head">
+        <span class="gem"></span>
+        <b id="character">等待开局</b>
+        <span id="floor"></span>
+        <span class="screen" id="screen" hidden></span>
+      </div>
+      <div class="hp" id="hp">
+        <span class="heart">♥</span>
+        <div class="bar"><i id="hpFill"></i></div>
+        <span class="num" id="hpText">— / —</span>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="status.js"></script>
+</body>
+</html>

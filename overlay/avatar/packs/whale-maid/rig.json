@@ -1,0 +1,1766 @@
+{
+  "version": 1,
+  "name": "whale-maid",
+  "title": "大肥鱼 · 女仆鲸鱼娘",
+  "credit": "鲸鱼娘 · CC BY-NC-SA 4.0 · 上善无形 / ZipZipPipe",
+  "creditStyle": {
+    "right": 430,
+    "bottom": 4,
+    "fontSize": 12,
+    "opacity": 0.6
+  },
+  "canvas": {
+    "width": 1024,
+    "height": 1536,
+    "anchorX": 519,
+    "anchorY": 1536,
+    "charHeight": 1260
+  },
+  "render": {
+    "pixelRatio": 1.5,
+    "maxFps": 60,
+    "padding": 80,
+    "rim": {
+      "enabled": true,
+      "color": [
+        0.27,
+        0.58,
+        1
+      ],
+      "width": 1,
+      "strength": 0.23
+    }
+  },
+  "groups": [
+    {
+      "id": "root",
+      "pivot": [
+        519,
+        1536
+      ]
+    },
+    {
+      "id": "body",
+      "parent": "root",
+      "pivot": [
+        519,
+        1536
+      ],
+      "bindings": {
+        "x": {
+          "param": "bodyX"
+        },
+        "y": {
+          "param": "bodyY"
+        },
+        "rotation": {
+          "param": "bodyRoll"
+        }
+      }
+    },
+    {
+      "id": "head",
+      "parent": "body",
+      "pivot": [
+        520,
+        1035
+      ],
+      "bindings": {
+        "rotation": {
+          "param": "roll",
+          "gain": 2.3
+        }
+      }
+    }
+  ],
+  "parts": [
+    {
+      "id": "backHair",
+      "parent": "head",
+      "image": "backHair.png",
+      "rect": [
+        9,
+        285,
+        1006,
+        1251
+      ],
+      "z": 1,
+      "pivot": [
+        516,
+        575
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": -0.3,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "back",
+      "weights": {
+        "axis": "y",
+        "from": 575,
+        "to": 1536,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "longHairLeft",
+      "parent": "head",
+      "image": "longHairLeft.png",
+      "rect": [
+        7,
+        810,
+        389,
+        726
+      ],
+      "z": 2,
+      "pivot": [
+        223,
+        835
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": -0.2,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "longLeft",
+      "weights": {
+        "axis": "y",
+        "from": 835,
+        "to": 1536,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "longHairRight",
+      "parent": "head",
+      "image": "longHairRight.png",
+      "rect": [
+        655,
+        710,
+        362,
+        826
+      ],
+      "z": 3,
+      "pivot": [
+        820,
+        740
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": -0.2,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "longRight",
+      "weights": {
+        "axis": "y",
+        "from": 740,
+        "to": 1536,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "body",
+      "parent": "body",
+      "image": "body.png",
+      "rect": [
+        175,
+        1011,
+        692,
+        525
+      ],
+      "z": 10,
+      "pivot": [
+        519,
+        1375
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": 0,
+      "deformers": [
+        "breath"
+      ]
+    },
+    {
+      "id": "neck",
+      "parent": "body",
+      "image": "neck.png",
+      "rect": [
+        469,
+        983,
+        101,
+        83
+      ],
+      "z": 9,
+      "pivot": [
+        520,
+        1048
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.05,
+      "deformers": [
+        "breath"
+      ]
+    },
+    {
+      "id": "face",
+      "parent": "head",
+      "image": "face.png",
+      "rect": [
+        192,
+        570,
+        607,
+        455
+      ],
+      "z": 20,
+      "pivot": [
+        521,
+        852
+      ],
+      "mesh": [
+        18,
+        18
+      ],
+      "depth": 0.55,
+      "deformers": [
+        "face",
+        "cheeks"
+      ]
+    },
+    {
+      "id": "blushLeft",
+      "parent": "head",
+      "image": "blushLeft.png",
+      "rect": [
+        303,
+        903,
+        141,
+        55
+      ],
+      "z": 24,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.56,
+      "deformers": [
+        "face",
+        "cheeks"
+      ],
+      "opacityParam": "blush"
+    },
+    {
+      "id": "blushRight",
+      "parent": "head",
+      "image": "blushRight.png",
+      "rect": [
+        598,
+        892,
+        144,
+        56
+      ],
+      "z": 24,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.56,
+      "deformers": [
+        "face",
+        "cheeks"
+      ],
+      "opacityParam": "blush"
+    },
+    {
+      "id": "chestBow",
+      "parent": "body",
+      "image": "chestBow.png",
+      "rect": [
+        416,
+        1047,
+        233,
+        179
+      ],
+      "z": 30,
+      "pivot": [
+        526,
+        1085
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0,
+      "deformers": [
+        "breath",
+        "hair"
+      ],
+      "physics": "chest",
+      "weights": {
+        "axis": "y",
+        "from": 1068,
+        "to": 1220,
+        "power": 1.6
+      }
+    },
+    {
+      "id": "headdress",
+      "parent": "head",
+      "image": "headdress.png",
+      "rect": [
+        82,
+        357,
+        861,
+        536
+      ],
+      "z": 40,
+      "pivot": [
+        519,
+        490
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.35,
+      "deformers": [
+        "face"
+      ]
+    },
+    {
+      "id": "ribbonLeft",
+      "parent": "head",
+      "image": "ribbonLeft.png",
+      "rect": [
+        96,
+        525,
+        153,
+        548
+      ],
+      "z": 44,
+      "pivot": [
+        222,
+        599
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.12,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "ribbonLeft",
+      "weights": {
+        "axis": "y",
+        "from": 599,
+        "to": 1073,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "ribbonRight",
+      "parent": "head",
+      "image": "ribbonRight.png",
+      "rect": [
+        785,
+        567,
+        131,
+        441
+      ],
+      "z": 45,
+      "pivot": [
+        820,
+        615
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.12,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "ribbonRight",
+      "weights": {
+        "axis": "y",
+        "from": 615,
+        "to": 1008,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "eyeWhiteLeft",
+      "parent": "head",
+      "image": "eyeWhiteLeft-open.png",
+      "rect": [
+        264,
+        735,
+        214,
+        185
+      ],
+      "z": 32,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.6,
+      "deformers": [
+        "face"
+      ],
+      "role": "eyeWhite",
+      "side": "left",
+      "variants": {
+        "open": "eyeWhiteLeft-open.png",
+        "half": "eyeWhiteLeft-half.png",
+        "closed": "eyeWhiteLeft-closed.png",
+        "happy": "eyeWhiteLeft-happy.png",
+        "teary": "eyeWhiteLeft-teary.png",
+        "star": "eyeWhiteLeft-star.png",
+        "dizzy": "eyeWhiteLeft-dizzy.png",
+        "happy.open": "eyeWhiteLeft-happy.png",
+        "happy.half": "eyeWhiteLeft-happy.png",
+        "happy.closed": "eyeWhiteLeft-happy.png",
+        "teary.open": "eyeWhiteLeft-teary.png",
+        "teary.half": "eyeWhiteLeft-teary-half.png",
+        "teary.closed": "eyeWhiteLeft-closed.png",
+        "star.open": "eyeWhiteLeft-star.png",
+        "star.half": "eyeWhiteLeft-star-half.png",
+        "star.closed": "eyeWhiteLeft-closed.png",
+        "dizzy.open": "eyeWhiteLeft-dizzy.png",
+        "dizzy.half": "eyeWhiteLeft-dizzy-half.png",
+        "dizzy.closed": "eyeWhiteLeft-closed.png"
+      }
+    },
+    {
+      "id": "irisLeft",
+      "parent": "head",
+      "image": "irisLeft.png",
+      "rect": [
+        264,
+        735,
+        214,
+        185
+      ],
+      "z": 34,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.61,
+      "deformers": [
+        "face"
+      ],
+      "role": "pupil",
+      "side": "left",
+      "mask": "eyeWhiteLeft"
+    },
+    {
+      "id": "highlightLeft",
+      "parent": "head",
+      "image": "highlightLeft.png",
+      "rect": [
+        264,
+        735,
+        214,
+        185
+      ],
+      "z": 35,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.61,
+      "deformers": [
+        "face"
+      ],
+      "role": "highlight",
+      "side": "left",
+      "mask": "eyeWhiteLeft"
+    },
+    {
+      "id": "eyelidLeft",
+      "parent": "head",
+      "image": "eyelidLeft-open.png",
+      "rect": [
+        264,
+        735,
+        214,
+        185
+      ],
+      "z": 36,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.62,
+      "deformers": [
+        "face"
+      ],
+      "role": "eyelid",
+      "side": "left",
+      "variants": {
+        "open": "eyelidLeft-open.png",
+        "half": "eyelidLeft-half.png",
+        "closed": "eyelidLeft-closed.png",
+        "happy": "eyelidLeft-happy.png",
+        "teary": "eyelidLeft-teary.png",
+        "star": "eyelidLeft-star.png",
+        "dizzy": "eyelidLeft-dizzy.png",
+        "happy.open": "eyelidLeft-happy.png",
+        "happy.half": "eyelidLeft-happy.png",
+        "happy.closed": "eyelidLeft-happy.png",
+        "teary.open": "eyelidLeft-teary.png",
+        "teary.half": "eyelidLeft-half.png",
+        "teary.closed": "eyelidLeft-closed.png",
+        "star.open": "eyelidLeft-star.png",
+        "star.half": "eyelidLeft-half.png",
+        "star.closed": "eyelidLeft-closed.png",
+        "dizzy.open": "eyelidLeft-dizzy.png",
+        "dizzy.half": "eyelidLeft-half.png",
+        "dizzy.closed": "eyelidLeft-closed.png"
+      }
+    },
+    {
+      "id": "eyeWhiteRight",
+      "parent": "head",
+      "image": "eyeWhiteRight-open.png",
+      "rect": [
+        574,
+        721,
+        220,
+        192
+      ],
+      "z": 32,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.6,
+      "deformers": [
+        "face"
+      ],
+      "role": "eyeWhite",
+      "side": "right",
+      "variants": {
+        "open": "eyeWhiteRight-open.png",
+        "half": "eyeWhiteRight-half.png",
+        "closed": "eyeWhiteRight-closed.png",
+        "happy": "eyeWhiteRight-happy.png",
+        "teary": "eyeWhiteRight-teary.png",
+        "star": "eyeWhiteRight-star.png",
+        "dizzy": "eyeWhiteRight-dizzy.png",
+        "happy.open": "eyeWhiteRight-happy.png",
+        "happy.half": "eyeWhiteRight-happy.png",
+        "happy.closed": "eyeWhiteRight-happy.png",
+        "teary.open": "eyeWhiteRight-teary.png",
+        "teary.half": "eyeWhiteRight-teary-half.png",
+        "teary.closed": "eyeWhiteRight-closed.png",
+        "star.open": "eyeWhiteRight-star.png",
+        "star.half": "eyeWhiteRight-star-half.png",
+        "star.closed": "eyeWhiteRight-closed.png",
+        "dizzy.open": "eyeWhiteRight-dizzy.png",
+        "dizzy.half": "eyeWhiteRight-dizzy-half.png",
+        "dizzy.closed": "eyeWhiteRight-closed.png"
+      }
+    },
+    {
+      "id": "irisRight",
+      "parent": "head",
+      "image": "irisRight.png",
+      "rect": [
+        574,
+        721,
+        220,
+        192
+      ],
+      "z": 34,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.61,
+      "deformers": [
+        "face"
+      ],
+      "role": "pupil",
+      "side": "right",
+      "mask": "eyeWhiteRight"
+    },
+    {
+      "id": "highlightRight",
+      "parent": "head",
+      "image": "highlightRight.png",
+      "rect": [
+        574,
+        721,
+        220,
+        192
+      ],
+      "z": 35,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.61,
+      "deformers": [
+        "face"
+      ],
+      "role": "highlight",
+      "side": "right",
+      "mask": "eyeWhiteRight"
+    },
+    {
+      "id": "eyelidRight",
+      "parent": "head",
+      "image": "eyelidRight-open.png",
+      "rect": [
+        574,
+        721,
+        220,
+        192
+      ],
+      "z": 36,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.62,
+      "deformers": [
+        "face"
+      ],
+      "role": "eyelid",
+      "side": "right",
+      "variants": {
+        "open": "eyelidRight-open.png",
+        "half": "eyelidRight-half.png",
+        "closed": "eyelidRight-closed.png",
+        "happy": "eyelidRight-happy.png",
+        "teary": "eyelidRight-teary.png",
+        "star": "eyelidRight-star.png",
+        "dizzy": "eyelidRight-dizzy.png",
+        "happy.open": "eyelidRight-happy.png",
+        "happy.half": "eyelidRight-happy.png",
+        "happy.closed": "eyelidRight-happy.png",
+        "teary.open": "eyelidRight-teary.png",
+        "teary.half": "eyelidRight-half.png",
+        "teary.closed": "eyelidRight-closed.png",
+        "star.open": "eyelidRight-star.png",
+        "star.half": "eyelidRight-half.png",
+        "star.closed": "eyelidRight-closed.png",
+        "dizzy.open": "eyelidRight-dizzy.png",
+        "dizzy.half": "eyelidRight-half.png",
+        "dizzy.closed": "eyelidRight-closed.png"
+      }
+    },
+    {
+      "id": "sideHairLeft",
+      "parent": "head",
+      "image": "sideHairLeft.png",
+      "rect": [
+        121,
+        578,
+        318,
+        648
+      ],
+      "z": 50,
+      "pivot": [
+        230,
+        696
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": 0.46,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "sideLeft",
+      "weights": {
+        "axis": "y",
+        "from": 810,
+        "to": 1205,
+        "power": 1.7
+      }
+    },
+    {
+      "id": "sideHairRight",
+      "parent": "head",
+      "image": "sideHairRight.png",
+      "rect": [
+        626,
+        630,
+        258,
+        599
+      ],
+      "z": 51,
+      "pivot": [
+        800,
+        694
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": 0.46,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "sideRight",
+      "weights": {
+        "axis": "y",
+        "from": 810,
+        "to": 1205,
+        "power": 1.7
+      }
+    },
+    {
+      "id": "frontHair",
+      "parent": "head",
+      "image": "frontHair.png",
+      "rect": [
+        146,
+        388,
+        692,
+        487
+      ],
+      "z": 52,
+      "pivot": [
+        515,
+        454
+      ],
+      "mesh": [
+        14,
+        16
+      ],
+      "depth": 0.48,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "front",
+      "weights": {
+        "axis": "y",
+        "from": 454,
+        "to": 875,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "ahoge",
+      "parent": "head",
+      "image": "ahoge.png",
+      "rect": [
+        329,
+        284,
+        233,
+        171
+      ],
+      "z": 53,
+      "pivot": [
+        514,
+        441
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.45,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "ahoge",
+      "weights": {
+        "axis": "y",
+        "from": 441,
+        "to": 287,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "browLeft",
+      "parent": "head",
+      "image": "browLeft-neutral.png",
+      "rect": [
+        300,
+        660,
+        150,
+        86
+      ],
+      "z": 55,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        4,
+        4
+      ],
+      "depth": 0.59,
+      "deformers": [
+        "face"
+      ],
+      "role": "brow",
+      "side": "left",
+      "variants": {
+        "neutral": "browLeft-neutral.png",
+        "happy": "browLeft-happy.png",
+        "excited": "browLeft-excited.png",
+        "surprised": "browLeft-surprised.png",
+        "sad": "browLeft-sad.png",
+        "angry": "browLeft-angry.png"
+      }
+    },
+    {
+      "id": "browRight",
+      "parent": "head",
+      "image": "browRight-neutral.png",
+      "rect": [
+        586,
+        648,
+        144,
+        92
+      ],
+      "z": 55,
+      "pivot": [
+        520,
+        850
+      ],
+      "mesh": [
+        4,
+        4
+      ],
+      "depth": 0.59,
+      "deformers": [
+        "face"
+      ],
+      "role": "brow",
+      "side": "right",
+      "variants": {
+        "neutral": "browRight-neutral.png",
+        "happy": "browRight-happy.png",
+        "excited": "browRight-excited.png",
+        "surprised": "browRight-surprised.png",
+        "sad": "browRight-sad.png",
+        "angry": "browRight-angry.png"
+      }
+    },
+    {
+      "id": "whaleClip",
+      "parent": "head",
+      "image": "whaleClip.png",
+      "rect": [
+        726,
+        638,
+        107,
+        120
+      ],
+      "z": 57,
+      "pivot": [
+        779,
+        703
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.5,
+      "deformers": [
+        "face"
+      ]
+    },
+    {
+      "id": "tassel",
+      "parent": "head",
+      "image": "tassel.png",
+      "rect": [
+        819,
+        656,
+        99,
+        182
+      ],
+      "z": 58,
+      "pivot": [
+        828,
+        664
+      ],
+      "mesh": [
+        6,
+        6
+      ],
+      "depth": 0.41,
+      "deformers": [
+        "face",
+        "hair"
+      ],
+      "physics": "tassel",
+      "weights": {
+        "axis": "y",
+        "from": 664,
+        "to": 838,
+        "power": 1.5
+      }
+    },
+    {
+      "id": "mouth",
+      "parent": "head",
+      "image": "mouth-N.png",
+      "rect": [
+        465,
+        897,
+        120,
+        88
+      ],
+      "z": 38,
+      "pivot": [
+        523,
+        933
+      ],
+      "mesh": [
+        4,
+        4
+      ],
+      "depth": 0.64,
+      "deformers": [
+        "face"
+      ],
+      "role": "mouth",
+      "variants": {
+        "N": "mouth-N.png",
+        "half": "mouth-half.png",
+        "A": "mouth-A.png",
+        "I": "mouth-I.png",
+        "U": "mouth-U.png",
+        "E": "mouth-E.png",
+        "O": "mouth-O.png",
+        "happy.N": "mouth-happy-N.png",
+        "happy.A": "mouth-happy-A.png",
+        "angry.N": "mouth-angry-N.png",
+        "angry.A": "mouth-angry-A.png",
+        "sad.N": "mouth-sad-N.png",
+        "sad.A": "mouth-sad-A.png",
+        "wavy.N": "mouth-wavy-N.png",
+        "cat.N": "mouth-cat-N.png",
+        "pout.N": "mouth-pout-N.png",
+        "tongue.N": "mouth-tongue-N.png",
+        "cry.N": "mouth-cry-N.png",
+        "hmm.N": "mouth-hmm-N.png"
+      }
+    }
+  ],
+  "parameters": {
+    "blush": {
+      "min": 0,
+      "max": 1,
+      "value": 0.82
+    },
+    "browLeft": {
+      "min": -1,
+      "max": 1,
+      "value": 0
+    },
+    "browRight": {
+      "min": -1,
+      "max": 1,
+      "value": 0
+    },
+    "cheekPuff": {
+      "min": 0,
+      "max": 1,
+      "value": 0
+    }
+  },
+  "deformers": {
+    "face": {
+      "type": "head",
+      "pivot": [
+        519,
+        846
+      ],
+      "angle": [
+        10,
+        8
+      ],
+      "parallax": [
+        190,
+        130
+      ],
+      "compress": 0.055,
+      "curve": 0.065
+    },
+    "hair": {
+      "type": "bend",
+      "param": "roll",
+      "angle": 0.65,
+      "axis": "y"
+    },
+    "breath": {
+      "type": "breath",
+      "center": [
+        520,
+        1215
+      ],
+      "radius": [
+        310,
+        250
+      ],
+      "amount": [
+        3.2,
+        -4.4
+      ]
+    },
+    "cheeks": {
+      "type": "cheek",
+      "centers": [
+        [
+          354,
+          923
+        ],
+        [
+          687,
+          913
+        ]
+      ],
+      "radius": [
+        88,
+        50
+      ],
+      "amount": [
+        12,
+        3
+      ],
+      "param": "cheekPuff"
+    }
+  },
+  "physics": {
+    "back": {
+      "segments": 3,
+      "stiffness": 65,
+      "damping": 15,
+      "mass": 1,
+      "maxAngle": 3,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "longLeft": {
+      "segments": 3,
+      "stiffness": 48,
+      "damping": 13,
+      "mass": 1,
+      "maxAngle": 4,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "longRight": {
+      "segments": 3,
+      "stiffness": 49,
+      "damping": 13,
+      "mass": 1,
+      "maxAngle": 4,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "sideLeft": {
+      "segments": 3,
+      "stiffness": 55,
+      "damping": 14,
+      "mass": 1,
+      "maxAngle": 3.5,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "sideRight": {
+      "segments": 3,
+      "stiffness": 57,
+      "damping": 14,
+      "mass": 1,
+      "maxAngle": 3.5,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "front": {
+      "segments": 3,
+      "stiffness": 100,
+      "damping": 20,
+      "mass": 1,
+      "maxAngle": 0.35,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "ahoge": {
+      "segments": 3,
+      "stiffness": 40,
+      "damping": 9,
+      "mass": 1,
+      "maxAngle": 8,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "ribbonLeft": {
+      "segments": 3,
+      "stiffness": 48,
+      "damping": 11,
+      "mass": 1,
+      "maxAngle": 7,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "ribbonRight": {
+      "segments": 3,
+      "stiffness": 50,
+      "damping": 11,
+      "mass": 1,
+      "maxAngle": 7,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "tassel": {
+      "segments": 3,
+      "stiffness": 27,
+      "damping": 8,
+      "mass": 1,
+      "maxAngle": 9,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    },
+    "chest": {
+      "segments": 3,
+      "stiffness": 85,
+      "damping": 16,
+      "mass": 1,
+      "maxAngle": 2,
+      "drive": {
+        "yaw": 0.8,
+        "pitch": 0.5,
+        "roll": 1.1,
+        "bodyX": 0.04,
+        "bodyY": 0.035
+      }
+    }
+  },
+  "motion": {
+    "smoothing": 10,
+    "breathPeriod": 3.8,
+    "breathAmount": 0.75,
+    "floatPeriod": 7.2,
+    "floatAmount": 1.6,
+    "swayPeriod": 8.4,
+    "swayAmount": 0.14,
+    "gazeGap": [
+      3.2,
+      6.8
+    ],
+    "gazeAmount": [
+      0.16,
+      0.08
+    ],
+    "talkRoll": 0.22
+  },
+  "blink": {
+    "minGap": 2.7,
+    "maxGap": 5.2,
+    "duration": 0.19,
+    "doubleChance": 0.17,
+    "doubleDelay": 0.3,
+    "asymmetry": 0.014
+  },
+  "eyes": {
+    "travel": [
+      10,
+      7
+    ],
+    "browTravel": 4,
+    "highlightPulse": 0.04,
+    "highlightSpeed": 2.0,
+    "halfThreshold": 0.7,
+    "closedThreshold": 0.23
+  },
+  "mouth": {
+    "halfLevel": 0.022,
+    "openLevel": 0.07,
+    "hysteresis": 0.7,
+    "gain": 6,
+    "minOpen": 0.75,
+    "transition": 0.055
+  },
+  "emotions": {
+    "neutral": {
+      "pose": {
+        "blush": 0.82
+      },
+      "effects": []
+    },
+    "happy": {
+      "pose": {
+        "blush": 1,
+        "roll": -0.07
+      },
+      "brow": "happy",
+      "eyeVariant": "happy",
+      "mouthVariant": "happy",
+      "action": {
+        "duration": 1.3,
+        "jump": 7,
+        "cycles": 2
+      },
+      "effects": [
+        {
+          "kind": "star",
+          "x": 836,
+          "y": 610,
+          "size": 43
+        }
+      ]
+    },
+    "excited": {
+      "pose": {
+        "blush": 1,
+        "roll": 0.09
+      },
+      "brow": "excited",
+      "mouthVariant": "happy",
+      "action": {
+        "duration": 1.7,
+        "jump": 13,
+        "cycles": 3
+      },
+      "effects": [
+        {
+          "kind": "star",
+          "x": 860,
+          "y": 570,
+          "size": 46,
+          "count": 3
+        }
+      ]
+    },
+    "surprised": {
+      "pose": {
+        "brow": -0.5,
+        "blush": 0.5
+      },
+      "brow": "surprised",
+      "action": {
+        "duration": 0.55,
+        "jump": 15,
+        "cycles": 1
+      },
+      "effects": [
+        {
+          "kind": "bubble",
+          "x": 850,
+          "y": 610,
+          "size": 43
+        }
+      ]
+    },
+    "sad": {
+      "pose": {
+        "pitch": 0.2,
+        "roll": -0.1,
+        "blush": 0.35
+      },
+      "eyes": {
+        "left": "half",
+        "right": "half"
+      },
+      "brow": "sad",
+      "mouthVariant": "sad",
+      "effects": [
+        {
+          "kind": "drop",
+          "x": 778,
+          "y": 900,
+          "size": 28
+        }
+      ]
+    },
+    "angry": {
+      "pose": {
+        "brow": 0.25,
+        "blush": 0.95
+      },
+      "brow": "angry",
+      "mouthVariant": "angry",
+      "action": {
+        "duration": 0.7,
+        "shake": 3,
+        "frequency": 28
+      },
+      "effects": [
+        {
+          "kind": "anger",
+          "x": 803,
+          "y": 641,
+          "size": 42
+        }
+      ]
+    },
+    "shy": {
+      "pose": {
+        "blush": 1,
+        "yaw": -0.25,
+        "gazeX": 0.4,
+        "roll": -0.14
+      },
+      "brow": "sad",
+      "mouthVariant": "wavy",
+      "oscillations": {
+        "bodyRoll": {
+          "amplitude": 0.18,
+          "period": 2.4
+        }
+      },
+      "effectInterval": 1.4,
+      "effects": [
+        {
+          "kind": "blushLines",
+          "x": 354,
+          "y": 919,
+          "size": 57,
+          "rise": 0,
+          "duration": 2,
+          "parent": "head",
+          "opacity": 0.65
+        },
+        {
+          "kind": "blushLines",
+          "x": 687,
+          "y": 909,
+          "size": 57,
+          "rise": 0,
+          "duration": 2,
+          "parent": "head",
+          "opacity": 0.65
+        }
+      ]
+    },
+    "smug": {
+      "pose": {
+        "blush": 0.8,
+        "pitch": -0.16,
+        "roll": 0.13,
+        "brow": 0.3
+      },
+      "eyes": {
+        "left": "half",
+        "right": "half"
+      },
+      "brow": "angry",
+      "mouthVariant": "cat",
+      "effectInterval": 2.0,
+      "effects": [
+        {
+          "kind": "star",
+          "x": 803,
+          "y": 650,
+          "size": 31,
+          "rise": 45,
+          "duration": 1.3
+        }
+      ]
+    },
+    "confused": {
+      "pose": {
+        "blush": 0.6,
+        "roll": 0.38,
+        "browLeft": -1,
+        "browRight": 0.7,
+        "gazeX": -0.1
+      },
+      "brow": "neutral",
+      "mouthVariant": "hmm",
+      "effectInterval": 1.7,
+      "effects": [
+        {
+          "kind": "question",
+          "x": 815,
+          "y": 475,
+          "size": 70,
+          "rise": 12,
+          "duration": 2.2,
+          "parent": "head"
+        }
+      ]
+    },
+    "cry": {
+      "pose": {
+        "blush": 0.9,
+        "pitch": 0.13,
+        "roll": -0.06
+      },
+      "brow": "sad",
+      "eyeVariant": "teary",
+      "layerOpacity": {
+        "irisLeft": 0,
+        "irisRight": 0,
+        "highlightLeft": 0,
+        "highlightRight": 0
+      },
+      "mouthVariant": "cry",
+      "oscillations": {
+        "bodyY": {
+          "amplitude": 1.8,
+          "period": 0.43
+        },
+        "roll": {
+          "amplitude": 0.045,
+          "period": 0.6
+        }
+      },
+      "effectInterval": 0.85,
+      "effects": [
+        {
+          "kind": "tear",
+          "x": 310,
+          "y": 887,
+          "size": 22,
+          "rise": -95,
+          "duration": 1.55,
+          "parent": "head",
+          "depth": 0.62
+        },
+        {
+          "kind": "tear",
+          "x": 738,
+          "y": 878,
+          "size": 22,
+          "rise": -95,
+          "duration": 1.55,
+          "parent": "head",
+          "depth": 0.62
+        }
+      ]
+    },
+    "pout": {
+      "pose": {
+        "blush": 1,
+        "cheekPuff": 1,
+        "brow": 0.15
+      },
+      "brow": "angry",
+      "mouthVariant": "pout",
+      "action": {
+        "duration": 0.7,
+        "jump": 9,
+        "cycles": 2
+      },
+      "effectInterval": 1.8,
+      "effects": [
+        {
+          "kind": "steam",
+          "x": 807,
+          "y": 628,
+          "size": 58,
+          "rise": 45,
+          "duration": 1.5
+        }
+      ]
+    },
+    "starry": {
+      "pose": {
+        "blush": 1,
+        "pitch": -0.12,
+        "bodyY": -3
+      },
+      "brow": "excited",
+      "eyeVariant": "star",
+      "layerOpacity": {
+        "irisLeft": 0,
+        "irisRight": 0,
+        "highlightLeft": 0,
+        "highlightRight": 0
+      },
+      "mouthVariant": "happy",
+      "oscillations": {
+        "bodyRoll": {
+          "amplitude": 0.1,
+          "period": 2.5
+        }
+      },
+      "effectInterval": 1.1,
+      "effects": [
+        {
+          "kind": "star",
+          "x": 825,
+          "y": 610,
+          "size": 38,
+          "rise": 60,
+          "duration": 1.5,
+          "count": 3,
+          "spread": [
+            125,
+            80
+          ]
+        }
+      ]
+    },
+    "dizzy": {
+      "pose": {
+        "blush": 0.75
+      },
+      "brow": "neutral",
+      "eyeVariant": "dizzy",
+      "layerOpacity": {
+        "irisLeft": 0,
+        "irisRight": 0,
+        "highlightLeft": 0,
+        "highlightRight": 0
+      },
+      "mouthVariant": "wavy",
+      "oscillations": {
+        "yaw": {
+          "amplitude": 0.15,
+          "period": 2.1
+        },
+        "pitch": {
+          "amplitude": 0.12,
+          "period": 2.1,
+          "phase": 1.5708
+        },
+        "roll": {
+          "amplitude": 0.25,
+          "period": 2.1
+        }
+      },
+      "effectInterval": 1.9,
+      "effects": [
+        {
+          "kind": "orbit",
+          "x": 520,
+          "y": 355,
+          "size": 125,
+          "rise": 0,
+          "duration": 2.5,
+          "parent": "head"
+        }
+      ]
+    },
+    "playful": {
+      "pose": {
+        "blush": 1,
+        "roll": -0.27,
+        "gazeX": 0.1
+      },
+      "eyes": {
+        "left": "closed",
+        "right": "open"
+      },
+      "eyeVariant": {
+        "left": "happy"
+      },
+      "brow": "happy",
+      "mouthVariant": "tongue",
+      "action": {
+        "duration": 0.9,
+        "jump": 6,
+        "cycles": 2
+      },
+      "effectInterval": 1.6,
+      "effects": [
+        {
+          "kind": "heart",
+          "x": 817,
+          "y": 657,
+          "size": 37,
+          "rise": 55,
+          "duration": 1.8
+        }
+      ]
+    }
+  },
+  "behaviors": {
+    "enabled": true,
+    "look": {
+      "cooldown": 8,
+      "duration": 2.3,
+      "pose": {
+        "yaw": -0.55,
+        "gazeX": -0.72,
+        "roll": -0.06
+      },
+      "nodChance": 0.25,
+      "nodAmount": 0.16
+    },
+    "gift": {
+      "cooldown": 3,
+      "duration": 2.6,
+      "emotion": "happy",
+      "effects": [
+        {
+          "kind": "heart",
+          "x": 812,
+          "y": 610,
+          "size": 40,
+          "count": 3
+        },
+        {
+          "kind": "star",
+          "x": 224,
+          "y": 730,
+          "size": 33
+        }
+      ]
+    },
+    "worry": {
+      "threshold": 0.3,
+      "pose": {
+        "pitch": 0.12,
+        "brow": 0.2
+      },
+      "brow": "sad",
+      "effectGap": 10,
+      "effects": [
+        {
+          "kind": "drop",
+          "x": 775,
+          "y": 895,
+          "size": 26
+        }
+      ]
+    },
+    "think": {
+      "gap": [
+        14,
+        26
+      ],
+      "duration": 3,
+      "pose": {
+        "roll": 0.2,
+        "gazeY": -0.45,
+        "gazeX": 0.12
+      }
+    },
+    "gameOver": {
+      "duration": 2,
+      "pose": {
+        "pitch": 0.15,
+        "gazeX": 0,
+        "gazeY": 0
+      }
+    }
+  },
+  "provenance": {
+    "masterSHA256": "16d88cbba071f8ed64611f09f65751d8762a5114a396a2e2f025de59924657a2",
+    "missingVariants": [],
+    "recommendedDisplay": {
+      "charHeight": 400,
+      "anchorX": 1712,
+      "anchorY": 1080,
+      "flip": false,
+      "credit": true
+    }
+  }
+}

@@ -1,0 +1,94 @@
+server:
+  host: 127.0.0.1
+  port: 8765
+  banner: 大肥鱼的深海尖塔电台 · AI 主播 · 杀戮尖塔2 实况
+overlay:
+  # 1920x1080 画布上的像素坐标。game 是游戏画面区域（舞台背景在这里挖洞，OBS 游戏采集放进去），
+  # 状态卡、字幕条会跟着 game / danmaku 自动对齐。改完重启主播程序。
+  game:
+    left: 456
+    top: 24
+    width: 1440
+    height: 810
+  # OBS 里游戏画面的延迟秒数（scripts/make_obs.py 按它生成场景）。现在靠 Mod 的先说后打对齐声音和画面，所以是 0；
+  # 不用先说后打时可以改回几秒，状态卡的层数/血量会一起晚显示。
+  game_delay_seconds: 0
+  danmaku:
+    left: 24
+    top: 282
+    width: 408
+    height: 774
+network:
+  # 联网走系统代理：WSL 读 HTTPS_PROXY 等环境变量，Windows 读系统代理设置；没设代理就是直连。
+  # 只有确定不想让程序经过代理时才改成 false。
+  use_system_proxy: true
+persona:
+  name: 大肥鱼
+  # 角色卡：性格和说话方式都写在这个 Markdown 里，随时打开改，保存后下一句就生效。
+  card: memory/角色卡.md
+  # 角色卡缺失或读不出来时才用下面两行。
+  description: 傲娇嘴硬、正事靠谱的 AI 主播，对自己的直播上心但嘴上不承认。DeepSeek 驱动，陪观众看 AI 玩杀戮尖塔2；不假装真人，不承诺能控制游戏。
+  style: 中文口语，每次一到两句，不使用舞台动作、括号旁白、表情符号或 Markdown，适合直接念出来。嘴硬但不辱骂，不引导付费打赏。
+brain:
+  max_tokens: 180
+  max_text_chars: 110
+  # 牌局台词（含先说后打）只说一句、最多几个字，约 2~3 秒；回弹幕还是按 max_text_chars。
+  game_text_chars: 20
+  temperature: 0.8
+  requests_per_minute: 6
+  requests_per_hour: 300
+  chat_replies_per_minute: 4
+  chat_reply_all: true
+  chat_user_replies_per_minute: 3
+  # 熟人印象随聊天回复实时更新；复用同一次模型请求，不增加请求次数。
+  viewer_memory_live: true
+  viewer_memory_max_tokens: 320
+  # 观众的打法建议：她回弹幕时听出来的打法主意，摆在打牌的 AI 面前供它权衡（不是命令，也不排队）。
+  # 一条摆多久、同时最多几条、全场多久收一条、同一个人多久收一条（秒）。
+  guidance_seconds: 90
+  guidance_max_items: 3
+  guidance_gap_seconds: 20
+  guidance_user_seconds: 60
+  # 牌局解说每分钟最多几句；回弹幕不占这个名额。
+  game_lines_per_minute: 4
+  # 每分钟至少几句：在一局里、一阵子没说牌局时，自己挑个角度聊（手牌、敌人、路线、卡组…）。0 = 关掉。
+  game_lines_min_per_minute: 1
+  min_gap_seconds: 6
+  idle_seconds: 100
+  chat_batch_seconds: 4
+  queue_size: 80
+  topic_ttl_seconds: 50
+  dedupe_seconds: 75
+  input_chars: 5000
+  context_turns: 4
+bilibili:
+  enabled: true
+  reconnect_seconds: 10
+  heartbeat_stale_seconds: 75
+game:
+  enabled: true
+  snapshot_seconds: 8
+  reconnect_seconds: 4
+  # 选卡、选路、买东西、选事件这类决定，讲思路至少隔这么久。
+  decision_cooldown_seconds: 60
+  # 战斗里：每回合第一张牌前说一句打算，斩杀/保命再说一句，其余出牌不说；两句之间至少隔这么久。
+  combat_gap_seconds: 20
+  # 牌局话题排队超过这么多秒还没轮到就作废（残血/精英Boss开打/胜负这类关键时刻不受限）。
+  topic_ttl_seconds: 15
+  low_hp_ratio: 0.25
+diary:
+  # 下播后她会整理记忆、写日记（memory/日记/），再发一条B站动态。
+  # dynamic: auto 自动发 / draft 只存草稿不发 / off 不写动态。离线和 dry-run 模式永远不发。
+  dynamic: auto
+  # 播不到这么多分钟的场次只记数据，不写日记、不发动态（测试开关播不会刷动态）。
+  min_minutes: 30
+  max_tokens: 1500
+audio:
+  playback_grace_seconds: 12
+  max_duration_seconds: 55
+  retention_seconds: 1800
+  max_files: 160
+  max_bytes: 100000000
+safety:
+  # 追加敏感词，不替代内置规则；只在本地过滤，不会发到模型。
+  extra_blocked_words: []

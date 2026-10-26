@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大肥鱼 · 舞台背景</title>
+  <link rel="stylesheet" href="/shared/base.css">
+  <link rel="stylesheet" href="stage.css">
+</head>
+<body>
+  <!-- 深海背景，游戏区域由 stage.js 挖空，OBS 里把游戏采集放在本源下方 -->
+  <div id="ocean">
+    <div class="rays"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="caustics"></div>
+    <div id="bubbles"></div>
+    <div class="spotlight"></div>
+    <div class="seabed"></div>
+  </div>
+  <div id="frame">
+    <div class="border"></div>
+    <span class="corner tl"></span><span class="corner tr"></span>
+    <span class="corner bl"></span><span class="corner br"></span>
+  </div>
+  <script type="module" src="stage.js"></script>
+</body>
+</html>

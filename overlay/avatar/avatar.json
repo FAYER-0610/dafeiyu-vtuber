@@ -1,0 +1,19 @@
+{
+  "_说明": "虚拟形象配置。renderer 为 video（视频动画包）、layers（分层图片）或 rig（自研 WebGL 网格）；pack 指向对应 pack.json / rig.json。当前用鲸鱼女仆精致版（rig），想换回旧视频包把 renderer 改成 video、pack 改成 packs/dsh-whale/pack.json。说明见 docs/avatar-rig.md。",
+  "_版权": "whale-maid 与 dsh-whale 都只能非商用，署名见各包的 ATTRIBUTION.md。credit 关掉时，署名必须写在直播间简介里（CC BY-NC-SA 4.0 要求署名，只是不一定在画面上）。",
+  "renderer": "rig",
+  "pack": "packs/whale-maid/rig.json",
+  "display": {
+    "charHeight": 400,
+    "anchorX": 1712,
+    "anchorY": 1080,
+    "flip": false,
+    "credit": false
+  },
+  "motion": {
+    "breath": 1.0,
+    "sway": 1.0,
+    "talkBounce": 1.0
+  },
+  "mouthGain": 1.0
+}

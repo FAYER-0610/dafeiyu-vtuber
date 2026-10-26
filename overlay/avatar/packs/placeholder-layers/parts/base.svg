@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <!-- 占位角色：蓝发女仆小鲸鱼（身体+头+头发，不含眼睛和嘴巴） -->
+  <rect x="262" y="500" width="76" height="110" rx="20" fill="#f6d9cb"/>
+  <path d="M120 800 C130 640 200 585 300 585 C400 585 470 640 480 800 Z" fill="#1f2a44"/>
+  <path d="M215 600 L300 690 L385 600 L360 800 L240 800 Z" fill="#f4f6fb"/>
+  <path d="M272 640 L300 668 L328 640 L300 705 Z" fill="#5aa9e6"/>
+  <ellipse cx="300" cy="360" rx="190" ry="180" fill="#ffe8dc"/>
+  <path d="M95 380 C80 220 180 130 300 130 C420 130 520 220 505 380 C480 300 440 260 400 250 C390 300 350 320 330 255 C300 300 260 310 250 255 C220 300 170 300 160 260 C130 290 110 330 95 380 Z" fill="#3b5ba9"/>
+  <path d="M95 380 C85 470 100 560 140 610 C135 520 130 450 150 400 Z" fill="#3b5ba9"/>
+  <path d="M505 380 C515 470 500 560 460 610 C465 520 470 450 450 400 Z" fill="#3b5ba9"/>
+  <path d="M300 130 C310 90 345 75 360 95 C335 100 320 115 312 135 Z" fill="#3b5ba9"/>
+  <path d="M150 175 C200 120 400 120 450 175 C430 150 380 132 300 132 C220 132 170 150 150 175 Z" fill="#ffffff" stroke="#c9d4ea" stroke-width="6"/>
+  <g fill="#ffffff" stroke="#c9d4ea" stroke-width="4">
+    <circle cx="190" cy="160" r="22"/><circle cx="245" cy="140" r="24"/><circle cx="300" cy="134" r="25"/>
+    <circle cx="355" cy="140" r="24"/><circle cx="410" cy="160" r="22"/>
+  </g>
+  <path d="M470 330 C520 300 560 330 548 370 C530 355 505 350 480 360 Z" fill="#5aa9e6"/>
+  <ellipse cx="205" cy="455" rx="34" ry="18" fill="#ffb3b3" opacity="0.55"/>
+  <ellipse cx="395" cy="455" rx="34" ry="18" fill="#ffb3b3" opacity="0.55"/>
+</svg>

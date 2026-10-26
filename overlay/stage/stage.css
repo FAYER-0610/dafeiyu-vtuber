@@ -1,0 +1,125 @@
+html, body { width: 1920px; height: 1080px; }
+
+#ocean {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(rgba(168, 208, 255, .07) 1px, transparent 1.6px) 0 0 / 22px 22px,
+    radial-gradient(ellipse 70% 55% at 30% 0%, rgba(80, 130, 255, .30), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 88% 100%, rgba(255, 157, 186, .10), transparent 70%),
+    linear-gradient(180deg, #13296a 0%, #0a1940 45%, #050b1f 100%);
+}
+
+/* 从海面斜射下来的光 */
+.rays i {
+  position: absolute;
+  top: -120px;
+  width: 140px;
+  height: 1300px;
+  transform-origin: 50% 0;
+  background: linear-gradient(180deg, rgba(168, 208, 255, .16), rgba(168, 208, 255, 0) 75%);
+  filter: blur(14px);
+  animation: ray 14s ease-in-out infinite alternate;
+}
+
+.rays i:nth-child(1) { left: 60px;  width: 120px; transform: rotate(14deg); animation-duration: 13s; }
+.rays i:nth-child(2) { left: 260px; width: 70px;  transform: rotate(10deg); animation-duration: 17s; opacity: .7; }
+.rays i:nth-child(3) { left: 820px; width: 160px; transform: rotate(16deg); animation-duration: 15s; }
+.rays i:nth-child(4) { left: 1240px; width: 90px; transform: rotate(12deg); animation-duration: 19s; opacity: .6; }
+.rays i:nth-child(5) { left: 1660px; width: 150px; transform: rotate(18deg); animation-duration: 16s; }
+
+@keyframes ray {
+  from { translate: -30px 0; opacity: .55; }
+  to   { translate: 40px 0;  opacity: 1; }
+}
+
+/* 水波光斑 */
+.caustics {
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(ellipse 9% 5% at 20% 30%, rgba(168, 208, 255, .06), transparent),
+    radial-gradient(ellipse 7% 4% at 70% 20%, rgba(168, 208, 255, .05), transparent),
+    radial-gradient(ellipse 10% 6% at 45% 70%, rgba(168, 208, 255, .05), transparent),
+    radial-gradient(ellipse 8% 5% at 85% 60%, rgba(168, 208, 255, .05), transparent);
+  animation: drift 24s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  to { transform: translate(3%, 2%) scale(1.05); }
+}
+
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200, 225, 255, .45);
+  background: radial-gradient(circle at 32% 30%, rgba(255, 255, 255, .55) 0 18%, rgba(168, 208, 255, .08) 40%, transparent 70%);
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rise {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  8%   { opacity: .9; }
+  50%  { transform: translate(18px, -560px); }
+  90%  { opacity: .7; }
+  100% { transform: translate(-6px, -1160px); opacity: 0; }
+}
+
+/* 形象脚下的光圈（右下角） */
+.spotlight {
+  position: absolute;
+  left: 1500px;
+  top: 830px;
+  width: 420px;
+  height: 250px;
+  background:
+    radial-gradient(ellipse 46% 9% at 50% 93%, rgba(168, 208, 255, .45), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 50% 70%, rgba(61, 107, 234, .30), transparent 72%);
+}
+
+.seabed {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 90' preserveAspectRatio='none'><path d='M0 50 Q240 20 480 46 T960 44 T1440 40 T1920 46 V90 H0Z' fill='%23040a1c' opacity='.75'/><path d='M0 66 Q320 44 640 66 T1280 62 T1920 64 V90 H0Z' fill='%23030817'/></svg>") 0 0 / 100% 100% no-repeat;
+}
+
+/* ---------- 游戏画框 ---------- */
+#frame {
+  position: absolute;
+  pointer-events: none;
+}
+
+#frame .border {
+  position: absolute;
+  inset: -5px;
+  border-radius: 19px;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--sky), var(--sapphire) 35%, var(--navy-700) 55%, var(--sapphire-hi) 80%, var(--gold));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 10px rgba(109, 151, 255, .55));
+}
+
+#frame .corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  border: 2px solid var(--gold);
+  border-radius: 3px;
+  background: linear-gradient(135deg, var(--sky), var(--sapphire) 60%, var(--navy-700));
+  box-shadow: 0 0 10px rgba(109, 151, 255, .8);
+}
+
+#frame .tl { left: -13px;  top: -13px; }
+#frame .tr { right: -13px; top: -13px; }
+#frame .bl { left: -13px;  bottom: -13px; }
+#frame .br { right: -13px; bottom: -13px; }

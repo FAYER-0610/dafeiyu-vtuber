@@ -1,0 +1,17 @@
+{
+  "_说明": "分层图片包：所有图层同一画布尺寸、位置对齐的透明 PNG/SVG。anchor 是脚底中心在画布上的坐标，charHeight 是角色在画布上的高度。",
+  "name": "占位角色（SVG 分层）",
+  "commercialUse": true,
+  "canvas": { "width": 600, "height": 800, "anchorX": 300, "anchorY": 800, "charHeight": 690 },
+  "layers": {
+    "base": "parts/base.svg",
+    "eyes": { "open": "parts/eyes_open.svg", "closed": "parts/eyes_closed.svg" },
+    "mouth": { "closed": "parts/mouth_closed.svg", "half": "parts/mouth_half.svg", "open": "parts/mouth_open.svg" }
+  },
+  "emotions": {
+    "happy": { "eyes": { "open": "parts/eyes_happy.svg" } },
+    "excited": { "eyes": { "open": "parts/eyes_happy.svg" } }
+  },
+  "mouth": { "halfLevel": 0.05, "openLevel": 0.13 },
+  "blink": { "minGap": 2.2, "maxGap": 5.5, "closedMs": 110, "doubleChance": 0.18 }
+}

@@ -1,0 +1,14 @@
+.env
+.env.*.tmp
+cookies*.json
+__pycache__/
+*.pyc
+.venv/
+.venv-wsl/
+runtime/*
+!runtime/.gitkeep
+research/
+# 每台机器自己的东西
+obs.bat
+memory/*
+!memory/角色卡.md
